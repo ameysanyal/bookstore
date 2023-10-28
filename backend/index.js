@@ -35,7 +35,7 @@ app.use('/books', booksRoute)
 
 mongoose.connect(mongoDBURL).then(() => {
     console.log("App connected to database")
-    app.listen(PORT, () => {
+    app.listen("https://bookstore-soc1.onrender.com/", () => {
         console.log(`App is listening to port:${PORT}`)
     })
 }).catch((error) => {
