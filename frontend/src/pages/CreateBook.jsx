@@ -20,7 +20,7 @@ function CreateBook() {
             publishYear,
         };
         setLoading(true);
-        axios.post('https://bookstore-soc1.onrender.com', data)
+        axios.post('https://bookstore-soc1.onrender.com/books', data)
             .then(() => {
                 setLoading(false);
                 enqueueSnackbar('Book Created Successfully', { variant: 'success' });

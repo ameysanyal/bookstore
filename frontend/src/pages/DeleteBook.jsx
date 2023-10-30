@@ -10,7 +10,7 @@ function DeleteBook() {
     const { id } = useParams();
     const { enqueueSnackbar } = useSnackbar();
     const handleDeleteBook = () => {
-        axios.delete(`https://bookstore-soc1.onrender.com/${id}`)
+        axios.delete(`https://bookstore-soc1.onrender.com/books/${id}`)
             .then(() => {
                 setLoading(false);
                 enqueueSnackbar('Book Deleted Successfully', { variant: 'success' });
@@ -38,9 +38,7 @@ function DeleteBook() {
                 >
                     Yes, Delete it
                 </button>
-
             </div>
-
         </div>
     )
 }

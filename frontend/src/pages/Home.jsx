@@ -15,7 +15,7 @@ function Home() {
     useEffect(() => {
         setLoading(true);
         axios
-            .get("https://bookstore-soc1.onrender.com")
+            .get("https://bookstore-soc1.onrender.com/books")
             .then((response) => {
                 setBooks(response.data.data);
                 setLoading(false);
@@ -25,7 +25,6 @@ function Home() {
                 setLoading(false);
             });
     }, []);
-
     return (
         <div className="p-4">
             <div className="flex justify-center items-center gap-x-4">
