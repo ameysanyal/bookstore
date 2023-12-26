@@ -7,7 +7,6 @@ import EditBook from './pages/EditBook';
 import DeleteBook from './pages/DeleteBook';
 
 
-
 const App = () => {
   return (
     <Routes>
@@ -21,3 +20,4 @@ const App = () => {
 }
 
 export default App
+
