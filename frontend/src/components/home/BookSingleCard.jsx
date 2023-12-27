@@ -9,6 +9,7 @@ import BookModal from './BookModal';
 
 const BookSingleCard = ({ book }) => {
     const [showModal, setShowModal] = useState(false);
+
     return (
         <div key={book._id}
             className='border-2 border-gray-500 rounded-lg px-4 py-2 m-4 relative hover:shadow-xl' >
@@ -29,19 +30,20 @@ const BookSingleCard = ({ book }) => {
                     className='text-3xl text-blue-800 hover:text-black cursor-pointer'
                     onClick={() => setShowModal(true)}
                 />
-                <Link to={`/book/details/${book._id}`}>
+                <Link to={`/books/details/${book._id}`}>
                     <BsInfoCircle className='text-2xl text-green-800 hover:text-black' />
                 </Link>
-                <Link to={`/book/edit/${book._id}`}>
+                <Link to={`/books/edit/${book._id}`}>
                     <AiOutlineEdit className='text-2xl text-yellow-800 hover:text-black' />
                 </Link>
-                <Link to={`/book/delete/${book._id}`}>
+                <Link to={`/books/delete/${book._id}`}>
                     <MdOutlineDelete className='text-2xl text-red-800 hover:text-black' />
                 </Link>
             </div>
             {
                 showModal && (<BookModal book={book} onClose={() => setShowModal(false)} />)
             }
+
         </div>
     )
 }
